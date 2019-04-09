@@ -23,11 +23,17 @@ public class MyStack<SomeType> implements Iterable<SomeType> {
     }
 
     public SomeType peek() {
-        return stack.peek();
+        if(isEmpty()) {
+            return null;
+        } else {
+            return stack.peek();
+        }
     }
 
     public SomeType pop() {
-
+        if(stack.pop() == null ||stack.peek() == null) {
+            return null;
+        }
         SomeType remove = stack.pop();
         stack.pop();
         return remove;
@@ -49,4 +55,5 @@ public class MyStack<SomeType> implements Iterable<SomeType> {
     public Spliterator<SomeType> spliterator() {
         return null;
     }
+
 }

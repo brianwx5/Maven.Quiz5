@@ -41,7 +41,7 @@ public class Group<_> implements Iterable<_>,GroupInterface<_> {
 
     @Override
     public Iterator<_> iterator() {
-        return null;
+        return arrayList.iterator();
     }
 
     @Override

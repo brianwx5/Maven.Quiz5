@@ -1,16 +1,12 @@
 package rocks.zipcode.io.quiz4.collections;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * @author leon on 11/12/2018.
  */
 public class ZipCodeWilmington {
     private List<Student> studentsEnrolled;
-    private Map<Student,Double> studyMap = new HashMap<Student,Double>();
 
     public ZipCodeWilmington() {
         this.studentsEnrolled = new ArrayList<>();
@@ -34,7 +30,7 @@ public class ZipCodeWilmington {
     }
 
     public Map<Student, Double> getStudyMap() {
-
+        Map<Student,Double> studyMap = new LinkedHashMap<Student,Double>();
         for (Student student: studentsEnrolled) {
             studyMap.put(student,student.getTotalStudyTime());
         }

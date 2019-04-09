@@ -10,7 +10,8 @@ import java.util.function.Consumer;
  * @author leon on 11/12/2018.
  */
 public class SimpleStringGroup implements Iterable<String> {
-    List<String> arrayList;
+    public List<String> arrayList;
+
     public SimpleStringGroup() {
         arrayList = new ArrayList<>();
     }
@@ -45,8 +46,8 @@ public class SimpleStringGroup implements Iterable<String> {
 
 
     @Override
-    public Iterator<String> iterator() {
-        return null;
+    public Iterator iterator() {
+        return arrayList.iterator();
     }
 
     @Override
